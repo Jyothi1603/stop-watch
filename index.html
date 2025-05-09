@@ -2,22 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interactive Stopwatch</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classic Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Stopwatch</h1>
-    <div class="timer" id="display">00:00:00</div>
-    <div class="buttons">
-      <button id="startPause">Start</button>
-      <button id="reset">Reset</button>
-      <button id="lap">Lap</button>
+  <div class="main-container">
+    <div class="card">
+      <h1>⏱ Stopwatch</h1>
+      <div class="timer" id="display">00:00:00.000</div>
+      <div class="button-grid">
+        <button id="start" title="Start">▶</button>
+        <button id="pause" title="Pause">⏸</button>
+        <button id="reset" title="Reset">⏹</button>
+        <button id="lap" title="Lap">🏁</button>
+      </div>
+      <div class="laps-section">
+        <div class="laps-header">
+          <h3>Laps (<span id="lap-count">0</span>)</h3>
+          <button id="clear-laps" class="small-btn">✖</button>
+        </div>
+        <ul id="laps"></ul>
+      </div>
     </div>
-    <ul id="laps"></ul>
   </div>
   <script src="script.js"></script>
 </body>
 </html>
-
